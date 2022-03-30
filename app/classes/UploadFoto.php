@@ -1,29 +1,39 @@
 <?php
 
-class UploadFoto
+namespace app\classes;
+
+use app\traits\ValidationFile;
+
+/// acoplamento
+/// composição
+/// favoreça a composição sobre a herança
+
+// é um acoplamento
+class UploadFoto extends Upload
 {
-    public $file;
-    public $newName;
-    public $extensions = ['png', 'jpg'];
+    use ValidationFile;
 
-    public function file($file)
+    private $extensions = ['png', 'jpg'];
+    private $upload;
+
+    public function __construct()
     {
-        $this->file = $file;
+        // composição
+        // $this->upload = new Upload;
     }
 
-    public function extension()
+    public static function teste()
     {
-        return pathinfo($this->file, PATHINFO_EXTENSION);
+        return "teste";
     }
 
-    public function rename()
+    public function newName()
     {
-        $unigId = uniqid(true);
-        $this->newName = $unigId . '.' . $this->extension();
+        return $this->newName;
     }
 
     public function upload()
     {
-        return $this->newName;
+        return $this->rename();
     }
 }

@@ -1,0 +1,17 @@
+{
+    "name": "user/curso_poo",
+    "autoload": {
+        "psr-4": {
+            "User\\CursoPoo\\": "app/",
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jonas Ferreira",
+            "email": "suporte@yesflex.com.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

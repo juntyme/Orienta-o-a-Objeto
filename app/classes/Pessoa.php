@@ -1,5 +1,7 @@
 <?php
 
+namespace app\classes;
+
 class Pessoa
 {
     public $idade;
@@ -10,6 +12,4 @@ class Pessoa
     {
         return "meu nome é {$this->nome}, minha idade é {$this->idade} e meu email é {$this->email}";
     }
-
 }
-

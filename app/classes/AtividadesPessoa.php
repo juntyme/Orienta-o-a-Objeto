@@ -1,8 +1,9 @@
 <?php
 
+namespace app\classes;
+
 class AtividadesPessoa
 {
-
     public function pular()
     {
         return "pular";
